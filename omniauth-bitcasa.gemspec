@@ -1,23 +1,28 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'omniauth/bitcasa/version'
+require File.expand_path('../lib/omniauth-github/version', __FILE__)
 
-Gem::Specification.new do |spec|
-  spec.name          = "omniauth-bitcasa"
-  spec.version       = Omniauth::Bitcasa::VERSION
-  spec.authors       = ["Guilherme Vinicius Moreira"]
-  spec.email         = ["gui.vinicius@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
-  spec.license       = "MIT"
+Gem::Specification.new do |gem|
+  gem.authors        = ["Guilherme Vinicius Moreira"]
+  gem.email           = ["gui.vinicius@gmail.com"]
+  gem.description   = %q{Unofficial OmniAuth strategy for Bitcasa.}
+  gem.summary      = %q{Unofficial OmniAuth strategy for Bitcasa.}
+  gem.homepage    = "https://github.com/guivinicius/omniauth-bitcasa"
+  gem.license          = "MIT"
 
-  spec.files         = `git ls-files`.split($/)
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
-  spec.require_paths = ["lib"]
+  gem.executables     = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  gem.files                 = `git ls-files`.split("\n")
+  gem.test_files          = `git ls-files -- {test,spec,features}/*`.split("\n")
+  gem.require_paths   = ["lib"]
+  gem.name               = "omniauth-bitcasa"
+  gem.version             = OmniAuth::Bitcasa::VERSION
 
-  spec.add_development_dependency "bundler", "~> 1.3"
-  spec.add_development_dependency "rake"
+  gem.add_dependency 'omniauth', '~> 1.0'
+  gem.add_dependency 'omniauth-oauth2', '~> 1.1'
+
+  gem.add_development_dependency "bundler", "~> 1.3"
+  gem.add_development_dependency "rake"
+  gem.add_development_dependency 'rspec', '~> 2.7'
+  gem.add_development_dependency 'rack-test'
+  gem.add_development_dependency 'simplecov'
+  gem.add_development_dependency 'webmock'
 end
