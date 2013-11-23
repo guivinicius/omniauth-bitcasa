@@ -1,6 +1,8 @@
 # Omniauth::Bitcasa
 
-TODO: Write a gem description
+Unofficial OmniAuth Strategy for the Bitcasa OAuth2 API. To
+use it, you'll need to sign up for an OAuth2 Application ID and Secret
+on the [Bitcasa Developers Page](https://developers.bitcasa.com).
 
 ## Installation
 
@@ -18,7 +20,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### With Sinatra
+
+```ruby
+use OmniAuth::Builder do
+  provider :bitcasa, ENV['BITCASA_KEY'], ENV['BITCASA_SECRET']
+end
+```
+
+### With Rails
+
+```ruby
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :bitcasa, ENV['BITCASA_KEY'], ENV['BITCASA_SECRET']
+end
 
 ## Contributing
 

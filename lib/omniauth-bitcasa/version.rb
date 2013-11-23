@@ -1,4 +1,4 @@
-module Omniauth
+module OmniAuth
   module Bitcasa
     VERSION = "0.0.1"
   end

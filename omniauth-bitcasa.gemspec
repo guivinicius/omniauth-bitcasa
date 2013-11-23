@@ -1,5 +1,5 @@
 # coding: utf-8
-require File.expand_path('../lib/omniauth-github/version', __FILE__)
+require File.expand_path('../lib/omniauth-bitcasa/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors        = ["Guilherme Vinicius Moreira"]
