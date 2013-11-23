@@ -2,7 +2,7 @@
 
 Unofficial OmniAuth Strategy for the Bitcasa OAuth2 API. To
 use it, you'll need to sign up for an OAuth2 Application ID and Secret
-on the [Bitcasa Developers Page](https://developers.bitcasa.com).
+on the [Bitcasa Developers Page](https://developer.bitcasa.com).
 
 ## Installation
 
