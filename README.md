@@ -34,6 +34,7 @@ end
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :bitcasa, ENV['BITCASA_KEY'], ENV['BITCASA_SECRET']
 end
+```
 
 ## Contributing
 
