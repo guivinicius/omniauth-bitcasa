@@ -1,5 +1,7 @@
 # Omniauth::Bitcasa
 
+## This gem is not working yet. Bitcasa needs to fix their API to be compliant to OAuth2 specifications.
+
 Unofficial OmniAuth Strategy for the Bitcasa OAuth2 API. To
 use it, you'll need to sign up for an OAuth2 Application ID and Secret
 on the [Bitcasa Developers Page](https://developer.bitcasa.com).
